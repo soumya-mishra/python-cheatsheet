@@ -63,7 +63,6 @@ index = <list>.index(<el>)     # Returns index of first occurrence or raises Val
 <list>.clear()                 # Removes all items. Also works on dictionary and set.
 ```
 
-
 Dictionary
 ----------
 ```python
