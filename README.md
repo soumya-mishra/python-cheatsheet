@@ -41,6 +41,7 @@ List
 <list>.sort()
 <list>.reverse()
 <list> = sorted(<collection>)
+sorted(student_tuples, key=lambda student: student[2])
 <iter> = reversed(<list>)
 ```
 
