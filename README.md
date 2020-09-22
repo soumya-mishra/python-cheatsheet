@@ -30,6 +30,7 @@ List
 ----
 ```python
 <list> = <list>[from_inclusive : to_exclusive : ±step_size]
+
 ```
 
 ```python
@@ -39,7 +40,7 @@ List
 
 ```python
 <list>.sort()
-<list>.reverse()
+<list>.reverse() |  list[: : -1] --> Reverse of list
 <list> = sorted(<collection>)
 sorted(student_tuples, key=lambda student: student[2])
 <iter> = reversed(<list>)
