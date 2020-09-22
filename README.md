@@ -1568,6 +1568,8 @@ Path
 ```python
 from os import getcwd, path, listdir
 from glob import glob
+for i in glob(r"C:\Users\OneDrive - SAP SE\Machine Learning\Dataset\IIITB Data\*"):
+    print(i)
 ```
 
 ```python
