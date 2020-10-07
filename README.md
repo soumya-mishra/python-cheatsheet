@@ -350,6 +350,7 @@ String
 
 Regex
 -----
+https://www.rexegg.com/regex-quickstart.html
 ```python
 import re
 <str>   = re.sub(<regex>, new, text, count=0)  # Substitutes all occurrences with 'new'.
