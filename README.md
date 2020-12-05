@@ -92,7 +92,58 @@ value = <dict>.pop(key)                         # Removes item or raises KeyErro
 {k for k, v in <dict>.items() if v == value}    # Returns set of keys that point to the value.
 {k: v for k, v in <dict>.items() if k in keys}  # Returns a dictionary, filtered by keys.
 ```
+### collections
+```
+ChainMap 
+from collections import ChaninMap
+baseline = {'music': 'bach', 'art': 'rembrandt'}
+adjustments = {'art': 'van gogh', 'opera': 'carmen'}
+list(ChainMap(baseline,adjustments).items())
+[('art', 'rembrandt'), ('opera', 'carmen'), ('music', 'bach')]
 
+- A ChainMap class is provided for quickly linking a number of mappings so they can be treated as a single unit.
+- It is often much faster than creating a new dictionary and running multiple update() calls.
+- other data strusture also can be used here
+
+#Counter
+- "It is a collection where elements are stored as dictionary keys and their counts are stored as dictionary values."
+from collections import Counter
+x = Counter([10,20,10,20,50,866,546])
+x  # prints a dict, hence all dict methods can be used
+Counter({10: 2, 20: 2, 50: 1, 866: 1, 546: 1})
+x.most_common(2)
+
+# Deque |Deques are a generalization of stacks and queues
+from collections import Deque
+append() | appendleft() |clear() |copy() | count()| extend() | extendleft() |insert(index,value) | pop() | popleft() | remove()
+|reverse() | rotate(n=1) Rotate the deque n steps to the right. If n is negative, rotate to the left.
+
+# defaultdict | in normal dict if key is not there throws error, but not in defaultdict
+#initially we pass the  type of default value in defaultdict()
+from collections import defaultdict
+
+d = defaultdict(int)
+d[10] = 'soumya'
+print(d)
+defaultdict(int, {10: 'soumya'})
+
+# namedtuple 
+from collections import namedtuple
+point = namedtuple('Ppoint',['a','b'])
+p = point(10,11)
+
+# Named tuple is useful in db table when do db operations
+EmployeeRecord = namedtuple('EmployeeRecord', 'name, age, title, department, paygrade')
+
+#OrderDict
+#Ordered dictionaries are just like regular dictionaries but have some extra capabilities relating to ordering operations.
+from collections import OrderedDict
+a = OrderedDict()
+a[10] = 'soumya'
+
+
+
+```
 ### Counter
 ```python
 >>> from collections import Counter
