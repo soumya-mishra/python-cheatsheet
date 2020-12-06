@@ -77,11 +77,9 @@ m1 = map(lambda i,j: {i:j}, range(3),range(100,103))
 for i in m1:
     print(i)
     
-    
-{0: 100}
-{1: 101}
-{2: 102}
-``
+`` 
+
+
 
 ```python
 value  = <dict>.get(key, default=None)          # Returns default if key is missing.
