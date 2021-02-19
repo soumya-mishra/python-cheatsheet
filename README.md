@@ -77,6 +77,10 @@ m1 = map(lambda i,j: {i:j}, range(3),range(100,103))
 for i in m1:
     print(i)
 `` 
+>>> x = {'a': 1, 'b': 2}
+>>> y = {'b': 3, 'c': 4}
+>>> z = {**x, **y}
+>>> 
 
 ```python
 value  = <dict>.get(key, default=None)          # Returns default if key is missing.
