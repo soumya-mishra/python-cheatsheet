@@ -421,6 +421,15 @@ import re
 <Match> = re.search(<regex>, text)             # Searches for first occurrence of the pattern.
 <Match> = re.match(<regex>, text)              # Searches only at the beginning of the text.
 <iter>  = re.finditer(<regex>, text)           # Returns all occurrences as match objects.
+
+>>> greedy_ha_regex = re.compile(r'(Ha){3,5}')
+>>> mo1 = greedy_ha_regex.search('HaHaHaHaHa')
+>>> mo1.group()
+'HaHaHaHaHa'
+>>> nongreedy_ha_regex = re.compile(r'(Ha){3,5}?')
+>>> mo2 = nongreedy_ha_regex.search('HaHaHaHaHa')
+>>> mo2.group()
+'HaHaHa'
 ```
 
 * **Search() and match() return None if they can't find a match.**
