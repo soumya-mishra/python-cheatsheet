@@ -71,16 +71,17 @@ Dictionary
 <view> = <dict>.keys()                          # Coll. of keys that reflects changes.
 <view> = <dict>.values()                        # Coll. of values that reflects changes.
 <view> = <dict>.items()                         # Coll. of key-value tuples that reflects chgs.
+>>> x = {'a': 1, 'b': 2}
+>>> y = {'b': 3, 'c': 4}
+>>> z = {**x, **y}
+>>> 
 ```
 ``
 m1 = map(lambda i,j: {i:j}, range(3),range(100,103))
 for i in m1:
     print(i)
 `` 
->>> x = {'a': 1, 'b': 2}
->>> y = {'b': 3, 'c': 4}
->>> z = {**x, **y}
->>> 
+
 
 ```python
 value  = <dict>.get(key, default=None)          # Returns default if key is missing.
